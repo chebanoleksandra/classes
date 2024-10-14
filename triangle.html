@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Triangle{
+            constructor(a, b, c){
+                this.a = a;
+                this.b = b;
+                this.c = c;
+            }
+            Input() {
+                this.a = prompt("Input a of a triangle:");
+                this.b = prompt("Input b of a triangle:");
+                this.c = prompt("Input c of a triangle:");
+            }
+            Print(){
+                console.log("a = " + this.a + "\nb = " + this.b + "\nc = " + this.c);
+            }
+            GetPerimeter() {
+                return this.a + this.b + this.c;
+            }
+            GetArea() {
+                let p = this.GetPerimeter()/2;
+                return sqrt(p * (p - this.a)* (p - this.b)* (p - this.c));
+            }
+            SetA() {
+                this.a = prompt("Input a of a triangle:");
+            }
+            SetB() {
+                this.b = prompt("Input b of a triangle:");
+            }
+            SetC() {
+                this.c = prompt("Input c of a triangle:");
+            }
+        }
+
+        let t = new Triangle(1, 2, 3);
+        t.Print();
+        t.Input();
+        t.Print();
+    </script>
+</body>
+</html>
